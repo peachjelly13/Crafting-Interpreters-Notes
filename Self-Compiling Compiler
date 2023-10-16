@@ -1,0 +1,8 @@
+- A self compiling compiler is written in the language it tends to compile.
+- A compiler reads files in one language, translates them, and outputs files in another language. You can implement a compiler in any language, including the same language it compiles, a process called self-hosting.
+- Another term for a compiler that can compile itself is a self-hosting compiler.
+
+- Bootstrapping in Compiler Design
+Bootstrapping is a self-compiling compiler, written in its source language, ensuring self-sufficiency and language evolution. 
+A self-compiling compiler is written in a source programming language that it determines to compile.
+In simple terms, a self-compiling compiler compiles its source code. This compiled compiler can compile everything else and its future versions as well.
