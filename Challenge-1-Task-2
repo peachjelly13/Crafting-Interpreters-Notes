@@ -1,0 +1,11 @@
+- Installed java on my wsl setup and wrote a hello world program as below:
+
+public class helloworld {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
+
+- To compile a java program in wsl : 
+- javac helloworld.java
+- java helloworld
