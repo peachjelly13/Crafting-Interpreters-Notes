@@ -1,0 +1,21 @@
+In programming language theory and proof theory, the Curry–Howard correspondence (also known as the Curry–Howard isomorphism or equivalence, or the proofs-as-programs and propositions- or formulae-as-types interpretation)
+is the direct relationship between computer programs and mathematical proofs.
+
+-A Functional Program:
+plus_comm =
+fun n m : nat =>
+nat_ind (fun n0 : nat => n0 + m = m + n0)
+  (plus_n_0 m)
+  (fun (y : nat) (H : y + m = m + y) =>
+   eq_ind (S (m + y))
+     (fun n0 : nat => S (y + m) = n0)
+     (f_equal S H)
+     (m + S y)
+     (plus_n_Sm m y)) n
+     : forall n m : nat, n + m = m + n
+
+Yacc is a tool that takes in a grammar file and produces a source file for a compiler, so it’s sort of like a “compiler” that outputs a compiler, which is where we get the term “compiler-compiler”.
+
+Yacc wasn’t the first of its ilk, which is why it’s named “Yacc”—Yet Another Compiler-Compiler. A later similar tool is Bison, named as a pun on the pronunciation of Yacc like “yak”.
+
+A compiler reads files in one language, translates them, and outputs files in another language. You can implement a compiler in any language, including the same language it compiles, a process called self-hosting.
